@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<style>
+	/* Styles for the toggle button */
+.toggle-button {
+  background-color: #fff;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Styles for the responsive menu */
+.responsive-menu {
+  display: none;
+}
+
+/* Media query to show the responsive menu on small screens */
+@media (max-width: 992px) {
+  .main-nav {
+    display: none;
+  }
+
+  .responsive-menu {
+    display: block;
+  }
+}
+
+</style>
+<body>
+	<div class="container2">
+		<div class="logo float-left">
+		  <h1><a href="./index.html">DIGIARNO</a></h1>
+		</div>
+	  
+		<nav class="main-nav float-right d-none d-lg-block">
+		  <ul>
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./about.html">About Us</a></li>
+			<li class="active"><a href="./news.html">News</a></li>
+			<li><a href="./courses.html">Courses</a></li>
+			<li><a href="./contact.html">Contact Us</a></li>
+			<li><button class="login"><a href=".">Login</a></button></li>
+			<li><button class="signup"><a href=".">SignUp</a></button></li>
+		  </ul>
+		</nav>
+	  
+		<div class="toggle-button-container d-lg-none">
+		  <button class="toggle-button">&#9776; Menu</button>
+		</div>
+	  
+		<div class="responsive-menu d-lg-none">
+		  <ul>
+			<li><a href="./index.html">Home</a></li>
+			<li><a href="./about.html">About Us</a></li>
+			<li><a href="./news.html">News</a></li>
+			<li><a href="./courses.html">Courses</a></li>
+			<li><a href="./contact.html">Contact Us</a></li>
+			<li><button class="login"><a href=".">Login</a></button></li>
+			<li><button class="signup"><a href=".">SignUp</a></button></li>
+		  </ul>
+		</div>
+	  </div>
+	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".toggle-button").click(function(){
+    $(".responsive-menu").slideToggle();
+  });
+});
+</script>
+
+</body>
+</html>
